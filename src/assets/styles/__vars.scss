@@ -1,0 +1,28 @@
+// BODY BACKGROUND
+$body-black-background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #0A0A0A;
+
+// DEFAULT COLORS
+$default-black-color-100: rgba(0, 0, 0, 1);
+$default-black-color-75: rgba(0, 0, 0, 0.75);
+$default-black-color-50: rgba(0, 0, 0, 0.50);
+$default-black-color-25: rgba(0, 0, 0, 0.25);
+
+$default-grey-color-100: rgba(33, 33, 33, 1);
+$default-grey-color-75: rgba(33, 33, 33, 0.75);
+$default-grey-color-50: rgba(33, 33, 33, 0.50);
+$default-grey-color-25: rgba(33, 33, 33, 0.25);
+
+$default-white-color-100: rgba(255, 255, 255, 1);
+$default-white-color-75: rgba(255, 255, 255, 0.75);
+$default-white-color-50: rgba(255, 255, 255, 0.50);
+$default-white-color-25: rgba(255, 255, 255, 0.25);
+
+/* FONT SIZES */
+$font-size-main: 16px;
+$font-size-relative: 1rem;
+
+// FONTS
+$font-Inter-sans-serif: 'Inter', sans-serif;
+
+/* @media (prefers-color-scheme: white) {:root {}} */
+/* @media (prefers-color-scheme: dark) {:root {}} */

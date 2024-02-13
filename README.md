@@ -1,4 +1,4 @@
-# pace_music
+# Pace Music
 
 ## Project setup
 ```

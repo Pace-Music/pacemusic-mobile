@@ -1,0 +1,51 @@
+@import './_fonts', './_vars', './_animation';
+
+*, 
+*::before, 
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+html, 
+body{
+    width: 100%;
+    min-height: 100dvh;
+    height: auto;
+    background: $body-black-background;
+    font-size: 16px;
+    font-weight: 300;
+    font-family: $font-Inter-sans-serif;
+    color: $default-white-color-100;
+    touch-action: none;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+header, 
+main, 
+footer, 
+section{
+    width: 100%;
+    height: auto;
+    z-index: 2;
+}
+
+main{
+    flex: 1;
+    position: relative;
+}
+
+header, 
+footer{
+    position: sticky;
+}

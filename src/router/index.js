@@ -1,25 +1,50 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-
-const routes = [
-  {
-    path: '/',
-    name: 'home',
-    component: HomeView
-  },
-  {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  }
-]
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes
+  routes: [
+    {
+      path: '/',
+      name: 'Main',
+      component: () => import(/* webpackChunkName: "Main" */ '../views/Main.vue'),
+    },
+    {
+      path: '/review',
+      name: 'Review',
+      component: () => import(/* webpackChunkName: "Review" */ '../views/Review.vue'),
+    },
+    {
+      path: '/favorite',
+      name: 'Favorite',
+      component: () => import(/* webpackChunkName: "Favorite" */ '../views/Favorite.vue'),
+    },
+    {
+      path: '/search',
+      name: 'Search',
+      component: () => import(/* webpackChunkName: "Search" */ '../views/Search.vue'),
+    },
+    {
+      path: '/settings                                                                                                                                                                                                                                                                                                                                                                                         ',
+      name: 'Additionally',
+      component: () => import(/* webpackChunkName: "Additionally" */ '../views/Additionally.vue'),
+    },
+    {
+      path: '/404',
+      name: '404',
+      component: () => import('../views/Error.vue'),
+      meta: { notFound: true }
+    },
+    {
+      path: '/:catchAll(.*)',
+      redirect: '/404'
+    },
+  ]
 })
+
+// Example of using a navigation guard to update the document title
+router.beforeEach((to, from, next) => {
+  document.title = 'Pace Music - ' + to.name;
+  next();
+});
 
 export default router

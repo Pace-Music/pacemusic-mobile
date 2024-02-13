@@ -1,30 +1,37 @@
+<script>
+  import Loading from "../src/components/Loader.vue";
+  import Header from "../src/components/Header.vue";
+  import Footer from "../src/components/Footer.vue";
+  import Gradient from "./components/Gradient.vue";
+  
+  export default {
+    name:'MainApp',
+    components: {
+        Loading,
+        Header,
+        Footer,
+        Gradient
+    },
+  };
+
+</script>
+
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <Loading></Loading>
+  <Header ref="header"></Header>
+  <noscript>
+    <strong>We're sorry but Pace Music doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+  </noscript>
+  <Gradient></Gradient>
+  <main :id="$route.meta.notFound ? 'error' : null">
+    <RouterView />
+  </main>
+  <Footer ref="footer"></Footer>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+<style scoped>
+  #error{
+    display: flex;
+    flex-direction: column;
   }
-}
 </style>
