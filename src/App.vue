@@ -18,11 +18,11 @@
 
 <template>
   <Loading></Loading>
+  <Gradient></Gradient>
   <Header ref="header"></Header>
   <noscript>
     <strong>We're sorry but Pace Music doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
   </noscript>
-  <Gradient></Gradient>
   <main :id="$route.meta.notFound ? 'error' : null">
     <RouterView />
   </main>

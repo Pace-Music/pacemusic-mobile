@@ -9,5 +9,7 @@
 </template>
 
 <style lang="scss" scoped>
-
+    footer{
+        padding: 1rem;
+    }
 </style>

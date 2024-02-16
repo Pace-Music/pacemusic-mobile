@@ -29,5 +29,21 @@
 </template>
 
 <style lang="scss" scoped>
+    .header{
+        width: 100%;
+        height: auto;
+        padding: 1.5rem;
 
+        &__navigation{
+            width: 100%;
+
+            &__list{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: flex-end;
+                gap: 1rem;
+            }
+        }
+    }
 </style>

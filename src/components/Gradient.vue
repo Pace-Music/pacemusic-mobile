@@ -1,5 +1,4 @@
 <template>
-    <!-- <div class="background"></div> -->
     <canvas class="background" id="canvas"></canvas>
   </template>
   
@@ -7,9 +6,7 @@
   export default {
     name: 'GradientBackground',
     mounted() {
-    //   this.generateRandomGradient();
-    //   setInterval(this.generateRandomGradient, 5000); // Генерировать новый градиент каждые 5 секунд
-            var canvas = document.getElementById("canvas");
+        var canvas = document.getElementById("canvas");
 
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
@@ -111,9 +108,6 @@
         }
         return shader;
         }
-
-        //From https://codepen.io/jlfwong/pen/GqmroZ
-        //Utility to complain loudly if we fail to find the attribute/uniform
         function getAttribLocation(program, name) {
         var attributeLocation = gl.getAttribLocation(program, name);
         if (attributeLocation === -1) {
@@ -197,15 +191,6 @@
 
         draw();
     },
-    // methods: {
-    //   generateRandomGradient() {
-    //     const colors = ['#fd6e6a', '#ff6a00', '#B0881B', '#955F0F', '#74009D', '#D913DD', '#3F3F80', '#181C4C', '#58463A'];
-    //     const randomColors = colors.sort(() => Math.random() - 0.5);
-    //     const gradient = `linear-gradient(${randomColors[0]}, ${randomColors[1]})`;
-    //     document.querySelector('.background').style.transition = 'background 2s linear';
-    //     document.querySelector('.background').style.background = gradient;
-    //   },
-    // },
   };
   </script>
   
@@ -218,6 +203,15 @@
     filter: brightness(0.5);
     filter: blur(100px);
     width: inherit;
+
+    &::after{
+        position: absolute;
+        width: 100%;
+        content: '';
+        height: 50vh;
+        bottom: 0;
+        background-color: black;
+    }
   }
   </style>
   
