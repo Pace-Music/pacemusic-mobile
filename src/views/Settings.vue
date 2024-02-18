@@ -3,7 +3,7 @@
     import Navigation from '@/components/Navigation.vue';
 
     export default{
-        name: "FavoriteView",
+        name: "SettingsView",
         components: {
             Header,
             Navigation,
@@ -14,7 +14,7 @@
 <template>
     <Header></Header>
     <main>
-        Favourite
+        settings
     </main>
     <Navigation></Navigation>
 </template>

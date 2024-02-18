@@ -24,10 +24,10 @@ const router = createRouter({
       component: () => import(/* webpackChunkName: "Search" */ '../views/Search.vue'),
     },
     {
-      path: '/settings                                                                                                                                                                                                                                                                                                                                                                                         ',
-      name: 'Additionally',
-      component: () => import(/* webpackChunkName: "Additionally" */ '../views/Additionally.vue'),
-    },
+      path: '/settings',
+      name: 'Settings',
+      component: () => import(/* webpackChunkName: "Settings" */ '../views/Settings.vue'),
+    },    
     {
       path: '/404',
       name: '404',

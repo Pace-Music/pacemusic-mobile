@@ -1,11 +1,22 @@
 <script>
+    import Header from '@/components/Header.vue';
+    import Navigation from '@/components/Navigation.vue';
+
     export default{
-        name: "ReviewView", 
+        name: "ReviewView",
+        components: {
+            Header,
+            Navigation,
+        } 
     }
 </script>
 
 <template>
-    <div>Review</div>
+    <Header></Header>
+    <main>
+        Review
+    </main>
+    <Navigation></Navigation>
 </template>
 
 <style lang="scss" scoped>

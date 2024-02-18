@@ -1,5 +1,5 @@
 <template>
-    <canvas class="background" id="canvas"></canvas>
+    <canvas class="background" ref="gradient" id="canvas"></canvas>
   </template>
   
   <script>
@@ -198,20 +198,20 @@
   .background {
     position: absolute;
     height: 100%;
-    z-index: 0;
     opacity: 0.15;
-    filter: brightness(0.5);
-    filter: blur(100px);
     width: inherit;
+    filter: brightness(0.5);
+    filter: blur(60px);
+    box-shadow: inset 1px 20px 20px 20px #0A0A0A;;
 
-    &::after{
+    /*&::after{
         position: absolute;
         width: 100%;
         content: '';
         height: 50vh;
         bottom: 0;
         background-color: black;
-    }
+    }*/
   }
   </style>
   
