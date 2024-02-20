@@ -198,20 +198,13 @@
   .background {
     position: absolute;
     height: 100%;
-    opacity: 0.15;
+    opacity: 0.1;
     width: inherit;
-    filter: brightness(0.5);
-    filter: blur(60px);
+    filter: brightness(0.9);
+    filter: blur(80px);
     box-shadow: inset 1px 20px 20px 20px #0A0A0A;;
-
-    /*&::after{
-        position: absolute;
-        width: 100%;
-        content: '';
-        height: 50vh;
-        bottom: 0;
-        background-color: black;
-    }*/
+    overflow: hidden;
+    user-select: none;
   }
   </style>
   

@@ -26,6 +26,8 @@ section{
     align-items: flex-start;
     justify-content: flex-start;
     gap: 1rem;
+    background: radial-gradient(50% 50% at 50% 50%, #000000 10%, rgba(217, 217, 217, 0) 100%);
+
 
     &.section{
         &-description{
@@ -57,7 +59,7 @@ section{
     }
 }
 
-#listen{
+.section-listen{
     padding-right: 0;
 
     & .section__container{
@@ -86,6 +88,7 @@ section{
                     box-shadow: inset -1px -1px 3px rgba(159, 192, 255, 0.2), inset -3px -3px 3px rgba(0, 0, 0, 0.2), inset 3px 3px 3px rgba(255, 255, 255, 0.2);
                     
                     &-item{
+                        border-radius: 1rem;
                         width: inherit;
                         height: inherit;
                     }

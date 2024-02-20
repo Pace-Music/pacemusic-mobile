@@ -1,12 +1,12 @@
 <script>
   import Loading from "../src/components/Loader.vue";
-  // import Gradient from "./components/Gradient.vue";
+  import Navigation from "./components/Navigation.vue";
   
   export default {
     name:'MainApp',
     components: {
         Loading,
-        // Gradient
+        Navigation
     },
   };
 </script>
@@ -16,20 +16,6 @@
   <noscript>
     <strong>We're sorry but Pace Music doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
   </noscript>
-  <!-- <Gradient></Gradient> -->
-  <Transition name="fade">
-    <RouterView ref="fade"/>
-  </Transition>
+  <RouterView/>
+  <Navigation></Navigation>
 </template>
-
-<style>
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s ease;
-}
-
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
-}
-</style>

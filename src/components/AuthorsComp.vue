@@ -20,31 +20,27 @@
             <div class="cards">
                 <a class="card">
                     <div class="card__img">
-                        <img class="card__img-item" src="https://i.scdn.co/image/ab67706c0000da84c906393cd082eb6c0a31a5ab" alt="ВОЖ">
-                        <img class="card__img-src" src="https://open.spotifycdn.com/cdn/images/favicon32.b64ecc03.png" alt="Spotify">
+                        <img class="card__img-item" src="https://i.scdn.co/image/ab67706c0000da84c906393cd082eb6c0a31a5ab" alt="Author">
                     </div>
-                    <h3><i class="subtract"></i><p>Название песни</p></h3>
+                    <h3>Author</h3>
                 </a>
                 <a class="card">
                     <div class="card__img">
-                        <img class="card__img-item" src="https://i.scdn.co/image/ab67706c0000da84c906393cd082eb6c0a31a5ab" alt="ВОЖ">
-                        <img class="card__img-src" src="https://open.spotifycdn.com/cdn/images/favicon32.b64ecc03.png" alt="Spotify">
+                        <img class="card__img-item" src="https://i.scdn.co/image/ab67706c0000da84c906393cd082eb6c0a31a5ab" alt="Author">
                     </div>
-                    <h3><i class="subtract"></i><p>Название песни</p></h3>
+                    <h3>Author</h3>
                 </a>
                 <a class="card">
                     <div class="card__img">
-                        <img class="card__img-item" src="https://i.scdn.co/image/ab67706c0000da84c906393cd082eb6c0a31a5ab" alt="ВОЖ">
-                        <img class="card__img-src" src="https://open.spotifycdn.com/cdn/images/favicon32.b64ecc03.png" alt="Spotify">
+                        <img class="card__img-item" src="https://i.scdn.co/image/ab67706c0000da84c906393cd082eb6c0a31a5ab" alt="Author">
                     </div>
-                    <h3><i class="subtract"></i><p>Название песни</p></h3>
+                    <h3>Author</h3>
                 </a>
                 <a class="card">
                     <div class="card__img">
-                        <img class="card__img-item" src="https://i.scdn.co/image/ab67706c0000da84c906393cd082eb6c0a31a5ab" alt="ВОЖ">
-                        <img class="card__img-src" src="https://open.spotifycdn.com/cdn/images/favicon32.b64ecc03.png" alt="Spotify">
+                        <img class="card__img-item" src="https://i.scdn.co/image/ab67706c0000da84c906393cd082eb6c0a31a5ab" alt="Author">
                     </div>
-                    <h3><i class="subtract"></i><p>Название песни</p></h3>
+                    <h3>Author</h3>
                 </a>
             </div>
         </div>
@@ -84,7 +80,8 @@
                 & .card{
                     display: flex;
                     flex-direction: column;
-                    justify-content: flex-start;
+                    justify-content: center;
+                    align-items: center;
                     gap: 4px;
 
                     &:first-child{
@@ -97,18 +94,12 @@
                         border-radius: 1rem;
                         position: relative;
                         box-shadow: inset 3px 3px 3px rgba(255, 255, 255, 0.2), -3px -3px 3px rgba(0, 0, 0, 0.2), -1px -1px 3px rgba(132, 181, 255, 0.25);
-                        
+                        border-radius: 50%;
+                        overflow: hidden;
+
                         &-item{
                             width: inherit;
                             height: inherit;
-                        }
-
-                        &-src{
-                            width: 15%;
-                            height: 15%;
-                            position: absolute;
-                            right: 1rem;
-                            top: 1rem;
                         }
                     }
 
@@ -118,6 +109,7 @@
                         align-items: center;
                         gap: 4px;
                         font-size: 14px;
+                        font-weight: 300;
                         padding: 8px;
                     }
                 }

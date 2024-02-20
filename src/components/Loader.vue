@@ -7,23 +7,22 @@
             pace
         },
         mounted() {
-            document.addEventListener("DOMContentLoaded", async () => {
-                console.log("Loading is ending...");
-                setTimeout(() => {
-                    if (document.querySelector('.container_loading')) {
-                        document.querySelector('.container_loading').classList.add('loading__end');
-                        setTimeout(() => {
-                            if (document.querySelector('.container_loading')) {
-                                document.querySelector('.container_loading').remove();
-                                document.body.classList.remove('loaded-false');
-                            }
-                        }, 1500);
-                    }
-                }, 1500);
-            })
+            console.log("Loading is ending...");
+            setTimeout(() => {
+                if (this.$refs.preloader) {
+                    document.querySelector('.container_loading').classList.add('loading__end');
+                    setTimeout(() => {
+                        document.body.classList.remove('hidden');
+                        if (document.querySelector('.container_loading')) {
+                            document.querySelector('.container_loading').remove();
+                        }
+                    }, 1250);
+                }
+            }, 2000);
         },
     }
 </script>
+
 
 <template>
     <div class="container_loading" ref="preloader">
@@ -49,7 +48,7 @@
     }
 
     .loading__end{
-        transition: opacity .5s linear;
+        transition: opacity 1.5s linear;
         opacity: 0;
       }
 </style>
